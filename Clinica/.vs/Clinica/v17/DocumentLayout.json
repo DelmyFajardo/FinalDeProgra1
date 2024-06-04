@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|c:\\users\\delmy\\desktop\\emrfinalprogra\\clinica\\laboratorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|solutionrelative:laboratorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|c:\\users\\delmy\\desktop\\emrfinalprogra\\clinica\\doctores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|solutionrelative:doctores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|c:\\users\\delmy\\desktop\\emrfinalprogra\\clinica\\pacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|solutionrelative:pacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|c:\\users\\delmy\\desktop\\emrfinalprogra\\clinica\\iniciodesesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|solutionrelative:iniciodesesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|c:\\users\\delmy\\desktop\\emrfinalprogra\\clinica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A0D9FA2-011C-4799-875B-9222950E425D}|Clinica.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Laboratorio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Laboratorio.cs",
+              "RelativeDocumentMoniker": "Laboratorio.cs",
+              "ToolTip": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Laboratorio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Laboratorio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T04:23:20.826Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Doctores.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Doctores.cs",
+              "RelativeDocumentMoniker": "Doctores.cs",
+              "ToolTip": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Doctores.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Doctores.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T04:22:57.028Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pacientes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Pacientes.cs",
+              "RelativeDocumentMoniker": "Pacientes.cs",
+              "ToolTip": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Pacientes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Pacientes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T04:20:07.796Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InicioDeSesion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\InicioDeSesion.cs",
+              "RelativeDocumentMoniker": "InicioDeSesion.cs",
+              "ToolTip": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\InicioDeSesion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "InicioDeSesion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T04:19:32.048Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\delmy\\Desktop\\EMRfinalProgra\\Clinica\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T04:18:05.02Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
