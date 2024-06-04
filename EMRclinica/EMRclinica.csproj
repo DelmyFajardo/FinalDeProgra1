@@ -70,10 +70,43 @@
     <Compile Include="Pacientes.Designer.cs">
       <DependentUpon>Pacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="PantallaInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaInicio.Designer.cs">
+      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prescripciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescripciones.Designer.cs">
+      <DependentUpon>Prescripciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recepcionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recepcionista.Designer.cs">
+      <DependentUpon>Recepcionista.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Doctores.resx">
+      <DependentUpon>Doctores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laboratorio.resx">
+      <DependentUpon>Laboratorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacientes.resx">
+      <DependentUpon>Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaInicio.resx">
+      <DependentUpon>PantallaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescripciones.resx">
+      <DependentUpon>Prescripciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +117,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recepcionista.resx">
+      <DependentUpon>Recepcionista.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
