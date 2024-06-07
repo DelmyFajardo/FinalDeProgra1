@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laboratorio));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnSalirLab = new System.Windows.Forms.Button();
+            this.BtnPacientesLab = new System.Windows.Forms.Button();
+            this.BtnRecepcionistaLab = new System.Windows.Forms.Button();
+            this.BtnLaboratorioLab = new System.Windows.Forms.Button();
+            this.BtnDoctoresLab = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -47,11 +52,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtNombreExamen = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.BtnDoctoresLab = new System.Windows.Forms.Button();
-            this.BtnLaboratorioLab = new System.Windows.Forms.Button();
-            this.BtnRecepcionistaLab = new System.Windows.Forms.Button();
-            this.BtnPacientesLab = new System.Windows.Forms.Button();
-            this.BtnSalirLab = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -83,6 +83,71 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 465);
             this.panel1.TabIndex = 35;
+            // 
+            // BtnSalirLab
+            // 
+            this.BtnSalirLab.BackColor = System.Drawing.Color.Red;
+            this.BtnSalirLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalirLab.ForeColor = System.Drawing.Color.White;
+            this.BtnSalirLab.Location = new System.Drawing.Point(85, 424);
+            this.BtnSalirLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnSalirLab.Name = "BtnSalirLab";
+            this.BtnSalirLab.Size = new System.Drawing.Size(84, 28);
+            this.BtnSalirLab.TabIndex = 107;
+            this.BtnSalirLab.Text = "Salir";
+            this.BtnSalirLab.UseVisualStyleBackColor = false;
+            // 
+            // BtnPacientesLab
+            // 
+            this.BtnPacientesLab.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnPacientesLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPacientesLab.ForeColor = System.Drawing.Color.White;
+            this.BtnPacientesLab.Location = new System.Drawing.Point(85, 111);
+            this.BtnPacientesLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnPacientesLab.Name = "BtnPacientesLab";
+            this.BtnPacientesLab.Size = new System.Drawing.Size(113, 38);
+            this.BtnPacientesLab.TabIndex = 82;
+            this.BtnPacientesLab.Text = "Pacientes";
+            this.BtnPacientesLab.UseVisualStyleBackColor = false;
+            // 
+            // BtnRecepcionistaLab
+            // 
+            this.BtnRecepcionistaLab.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnRecepcionistaLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRecepcionistaLab.ForeColor = System.Drawing.Color.White;
+            this.BtnRecepcionistaLab.Location = new System.Drawing.Point(86, 327);
+            this.BtnRecepcionistaLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnRecepcionistaLab.Name = "BtnRecepcionistaLab";
+            this.BtnRecepcionistaLab.Size = new System.Drawing.Size(112, 38);
+            this.BtnRecepcionistaLab.TabIndex = 81;
+            this.BtnRecepcionistaLab.Text = "Recepcionista";
+            this.BtnRecepcionistaLab.UseVisualStyleBackColor = false;
+            // 
+            // BtnLaboratorioLab
+            // 
+            this.BtnLaboratorioLab.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnLaboratorioLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLaboratorioLab.ForeColor = System.Drawing.Color.White;
+            this.BtnLaboratorioLab.Location = new System.Drawing.Point(86, 253);
+            this.BtnLaboratorioLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnLaboratorioLab.Name = "BtnLaboratorioLab";
+            this.BtnLaboratorioLab.Size = new System.Drawing.Size(112, 38);
+            this.BtnLaboratorioLab.TabIndex = 80;
+            this.BtnLaboratorioLab.Text = "Laboratorio";
+            this.BtnLaboratorioLab.UseVisualStyleBackColor = false;
+            // 
+            // BtnDoctoresLab
+            // 
+            this.BtnDoctoresLab.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnDoctoresLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDoctoresLab.ForeColor = System.Drawing.Color.White;
+            this.BtnDoctoresLab.Location = new System.Drawing.Point(86, 180);
+            this.BtnDoctoresLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnDoctoresLab.Name = "BtnDoctoresLab";
+            this.BtnDoctoresLab.Size = new System.Drawing.Size(112, 38);
+            this.BtnDoctoresLab.TabIndex = 79;
+            this.BtnDoctoresLab.Text = "Doctores";
+            this.BtnDoctoresLab.UseVisualStyleBackColor = false;
             // 
             // pictureBox7
             // 
@@ -172,6 +237,7 @@
             this.btnEditExam.TabIndex = 84;
             this.btnEditExam.Text = "Editar";
             this.btnEditExam.UseVisualStyleBackColor = false;
+            this.btnEditExam.Click += new System.EventHandler(this.btnEditExam_Click);
             // 
             // btnElimExam
             // 
@@ -185,6 +251,7 @@
             this.btnElimExam.TabIndex = 83;
             this.btnElimExam.Text = "Eliminar";
             this.btnElimExam.UseVisualStyleBackColor = false;
+            this.btnElimExam.Click += new System.EventHandler(this.btnElimExam_Click);
             // 
             // btnAggExam
             // 
@@ -270,71 +337,6 @@
             this.label12.Size = new System.Drawing.Size(145, 19);
             this.label12.TabIndex = 78;
             this.label12.Text = "Nombre del Examen";
-            // 
-            // BtnDoctoresLab
-            // 
-            this.BtnDoctoresLab.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnDoctoresLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDoctoresLab.ForeColor = System.Drawing.Color.White;
-            this.BtnDoctoresLab.Location = new System.Drawing.Point(86, 180);
-            this.BtnDoctoresLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnDoctoresLab.Name = "BtnDoctoresLab";
-            this.BtnDoctoresLab.Size = new System.Drawing.Size(112, 38);
-            this.BtnDoctoresLab.TabIndex = 79;
-            this.BtnDoctoresLab.Text = "Doctores";
-            this.BtnDoctoresLab.UseVisualStyleBackColor = false;
-            // 
-            // BtnLaboratorioLab
-            // 
-            this.BtnLaboratorioLab.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnLaboratorioLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLaboratorioLab.ForeColor = System.Drawing.Color.White;
-            this.BtnLaboratorioLab.Location = new System.Drawing.Point(86, 253);
-            this.BtnLaboratorioLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnLaboratorioLab.Name = "BtnLaboratorioLab";
-            this.BtnLaboratorioLab.Size = new System.Drawing.Size(112, 38);
-            this.BtnLaboratorioLab.TabIndex = 80;
-            this.BtnLaboratorioLab.Text = "Laboratorio";
-            this.BtnLaboratorioLab.UseVisualStyleBackColor = false;
-            // 
-            // BtnRecepcionistaLab
-            // 
-            this.BtnRecepcionistaLab.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnRecepcionistaLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRecepcionistaLab.ForeColor = System.Drawing.Color.White;
-            this.BtnRecepcionistaLab.Location = new System.Drawing.Point(86, 327);
-            this.BtnRecepcionistaLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnRecepcionistaLab.Name = "BtnRecepcionistaLab";
-            this.BtnRecepcionistaLab.Size = new System.Drawing.Size(112, 38);
-            this.BtnRecepcionistaLab.TabIndex = 81;
-            this.BtnRecepcionistaLab.Text = "Recepcionista";
-            this.BtnRecepcionistaLab.UseVisualStyleBackColor = false;
-            // 
-            // BtnPacientesLab
-            // 
-            this.BtnPacientesLab.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnPacientesLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPacientesLab.ForeColor = System.Drawing.Color.White;
-            this.BtnPacientesLab.Location = new System.Drawing.Point(85, 111);
-            this.BtnPacientesLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnPacientesLab.Name = "BtnPacientesLab";
-            this.BtnPacientesLab.Size = new System.Drawing.Size(113, 38);
-            this.BtnPacientesLab.TabIndex = 82;
-            this.BtnPacientesLab.Text = "Pacientes";
-            this.BtnPacientesLab.UseVisualStyleBackColor = false;
-            // 
-            // BtnSalirLab
-            // 
-            this.BtnSalirLab.BackColor = System.Drawing.Color.Red;
-            this.BtnSalirLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalirLab.ForeColor = System.Drawing.Color.White;
-            this.BtnSalirLab.Location = new System.Drawing.Point(85, 424);
-            this.BtnSalirLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnSalirLab.Name = "BtnSalirLab";
-            this.BtnSalirLab.Size = new System.Drawing.Size(84, 28);
-            this.BtnSalirLab.TabIndex = 107;
-            this.BtnSalirLab.Text = "Salir";
-            this.BtnSalirLab.UseVisualStyleBackColor = false;
             // 
             // Laboratorio
             // 

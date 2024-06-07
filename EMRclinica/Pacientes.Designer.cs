@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pacientes));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.BtnSalirPacientes = new System.Windows.Forms.Button();
+            this.BtnPacientes = new System.Windows.Forms.Button();
+            this.BtnDoctores = new System.Windows.Forms.Button();
+            this.BtnLab = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -54,13 +60,8 @@
             this.btnEliminarPaciente = new System.Windows.Forms.Button();
             this.btnAgregarPaciente = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnLab = new System.Windows.Forms.Button();
-            this.BtnDoctores = new System.Windows.Forms.Button();
-            this.BtnPacientes = new System.Windows.Forms.Button();
-            this.BtnSalirPacientes = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PacientesDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -90,6 +90,83 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 694);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(60, 45);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(98, 80);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 107;
+            this.pictureBox7.TabStop = false;
+            // 
+            // BtnSalirPacientes
+            // 
+            this.BtnSalirPacientes.BackColor = System.Drawing.Color.Red;
+            this.BtnSalirPacientes.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalirPacientes.ForeColor = System.Drawing.Color.White;
+            this.BtnSalirPacientes.Location = new System.Drawing.Point(74, 574);
+            this.BtnSalirPacientes.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnSalirPacientes.Name = "BtnSalirPacientes";
+            this.BtnSalirPacientes.Size = new System.Drawing.Size(84, 28);
+            this.BtnSalirPacientes.TabIndex = 106;
+            this.BtnSalirPacientes.Text = "Salir";
+            this.BtnSalirPacientes.UseVisualStyleBackColor = false;
+            // 
+            // BtnPacientes
+            // 
+            this.BtnPacientes.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnPacientes.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPacientes.ForeColor = System.Drawing.Color.White;
+            this.BtnPacientes.Location = new System.Drawing.Point(73, 194);
+            this.BtnPacientes.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnPacientes.Name = "BtnPacientes";
+            this.BtnPacientes.Size = new System.Drawing.Size(126, 38);
+            this.BtnPacientes.TabIndex = 78;
+            this.BtnPacientes.Text = "Pacientes";
+            this.BtnPacientes.UseVisualStyleBackColor = false;
+            // 
+            // BtnDoctores
+            // 
+            this.BtnDoctores.BackColor = System.Drawing.Color.SlateGray;
+            this.BtnDoctores.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDoctores.ForeColor = System.Drawing.Color.White;
+            this.BtnDoctores.Location = new System.Drawing.Point(73, 270);
+            this.BtnDoctores.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnDoctores.Name = "BtnDoctores";
+            this.BtnDoctores.Size = new System.Drawing.Size(126, 38);
+            this.BtnDoctores.TabIndex = 77;
+            this.BtnDoctores.Text = "Doctores";
+            this.BtnDoctores.UseVisualStyleBackColor = false;
+            // 
+            // BtnLab
+            // 
+            this.BtnLab.BackColor = System.Drawing.Color.SlateGray;
+            this.BtnLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLab.ForeColor = System.Drawing.Color.White;
+            this.BtnLab.Location = new System.Drawing.Point(73, 361);
+            this.BtnLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnLab.Name = "BtnLab";
+            this.BtnLab.Size = new System.Drawing.Size(126, 38);
+            this.BtnLab.TabIndex = 76;
+            this.BtnLab.Text = "Laboratorio";
+            this.BtnLab.UseVisualStyleBackColor = false;
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BtnAgregar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregar.Location = new System.Drawing.Point(74, 458);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(126, 38);
+            this.BtnAgregar.TabIndex = 75;
+            this.BtnAgregar.Text = "Recepcionista";
+            this.BtnAgregar.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -312,6 +389,7 @@
             this.btnEditarPaciente.TabIndex = 76;
             this.btnEditarPaciente.Text = "Editar";
             this.btnEditarPaciente.UseVisualStyleBackColor = false;
+            this.btnEditarPaciente.Click += new System.EventHandler(this.btnEditarPaciente_Click);
             // 
             // btnEliminarPaciente
             // 
@@ -325,6 +403,7 @@
             this.btnEliminarPaciente.TabIndex = 75;
             this.btnEliminarPaciente.Text = "Eliminar";
             this.btnEliminarPaciente.UseVisualStyleBackColor = false;
+            this.btnEliminarPaciente.Click += new System.EventHandler(this.btnEliminarPaciente_Click);
             // 
             // btnAgregarPaciente
             // 
@@ -349,83 +428,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 78;
             this.pictureBox6.TabStop = false;
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnAgregar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregar.Location = new System.Drawing.Point(74, 458);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(126, 38);
-            this.BtnAgregar.TabIndex = 75;
-            this.BtnAgregar.Text = "Recepcionista";
-            this.BtnAgregar.UseVisualStyleBackColor = false;
-            // 
-            // BtnLab
-            // 
-            this.BtnLab.BackColor = System.Drawing.Color.SlateGray;
-            this.BtnLab.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLab.ForeColor = System.Drawing.Color.White;
-            this.BtnLab.Location = new System.Drawing.Point(73, 361);
-            this.BtnLab.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnLab.Name = "BtnLab";
-            this.BtnLab.Size = new System.Drawing.Size(126, 38);
-            this.BtnLab.TabIndex = 76;
-            this.BtnLab.Text = "Laboratorio";
-            this.BtnLab.UseVisualStyleBackColor = false;
-            // 
-            // BtnDoctores
-            // 
-            this.BtnDoctores.BackColor = System.Drawing.Color.SlateGray;
-            this.BtnDoctores.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDoctores.ForeColor = System.Drawing.Color.White;
-            this.BtnDoctores.Location = new System.Drawing.Point(73, 270);
-            this.BtnDoctores.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnDoctores.Name = "BtnDoctores";
-            this.BtnDoctores.Size = new System.Drawing.Size(126, 38);
-            this.BtnDoctores.TabIndex = 77;
-            this.BtnDoctores.Text = "Doctores";
-            this.BtnDoctores.UseVisualStyleBackColor = false;
-            // 
-            // BtnPacientes
-            // 
-            this.BtnPacientes.BackColor = System.Drawing.Color.LightSlateGray;
-            this.BtnPacientes.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPacientes.ForeColor = System.Drawing.Color.White;
-            this.BtnPacientes.Location = new System.Drawing.Point(73, 194);
-            this.BtnPacientes.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnPacientes.Name = "BtnPacientes";
-            this.BtnPacientes.Size = new System.Drawing.Size(126, 38);
-            this.BtnPacientes.TabIndex = 78;
-            this.BtnPacientes.Text = "Pacientes";
-            this.BtnPacientes.UseVisualStyleBackColor = false;
-            // 
-            // BtnSalirPacientes
-            // 
-            this.BtnSalirPacientes.BackColor = System.Drawing.Color.Red;
-            this.BtnSalirPacientes.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalirPacientes.ForeColor = System.Drawing.Color.White;
-            this.BtnSalirPacientes.Location = new System.Drawing.Point(74, 574);
-            this.BtnSalirPacientes.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnSalirPacientes.Name = "BtnSalirPacientes";
-            this.BtnSalirPacientes.Size = new System.Drawing.Size(84, 28);
-            this.BtnSalirPacientes.TabIndex = 106;
-            this.BtnSalirPacientes.Text = "Salir";
-            this.BtnSalirPacientes.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(60, 45);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(98, 80);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 107;
-            this.pictureBox7.TabStop = false;
             // 
             // Pacientes
             // 
@@ -457,6 +459,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pacientes";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -464,7 +467,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PacientesDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
