@@ -33,6 +33,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.BtnSalirInicio = new System.Windows.Forms.Button();
             this.BtnPacientesInicio = new System.Windows.Forms.Button();
             this.BtnDoctoresInicio = new System.Windows.Forms.Button();
             this.BtnRecepcionistaInicio = new System.Windows.Forms.Button();
@@ -59,11 +61,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.BtnSalirInicio = new System.Windows.Forms.Button();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.PrescrBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -78,7 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox13
@@ -112,10 +113,12 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.PrescrBtn);
             this.panel2.Controls.Add(this.pictureBox11);
             this.panel2.Controls.Add(this.BtnSalirInicio);
             this.panel2.Controls.Add(this.BtnPacientesInicio);
@@ -133,6 +136,32 @@
             this.panel2.Size = new System.Drawing.Size(215, 694);
             this.panel2.TabIndex = 42;
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(57, 50);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(98, 80);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 109;
+            this.pictureBox11.TabStop = false;
+            // 
+            // BtnSalirInicio
+            // 
+            this.BtnSalirInicio.BackColor = System.Drawing.Color.Red;
+            this.BtnSalirInicio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalirInicio.ForeColor = System.Drawing.Color.White;
+            this.BtnSalirInicio.Location = new System.Drawing.Point(71, 611);
+            this.BtnSalirInicio.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnSalirInicio.Name = "BtnSalirInicio";
+            this.BtnSalirInicio.Size = new System.Drawing.Size(84, 28);
+            this.BtnSalirInicio.TabIndex = 106;
+            this.BtnSalirInicio.Text = "Salir";
+            this.BtnSalirInicio.UseVisualStyleBackColor = false;
+            this.BtnSalirInicio.Click += new System.EventHandler(this.BtnSalirInicio_Click);
+            // 
             // BtnPacientesInicio
             // 
             this.BtnPacientesInicio.BackColor = System.Drawing.Color.LightSlateGray;
@@ -145,6 +174,7 @@
             this.BtnPacientesInicio.TabIndex = 82;
             this.BtnPacientesInicio.Text = "Pacientes";
             this.BtnPacientesInicio.UseVisualStyleBackColor = false;
+            this.BtnPacientesInicio.Click += new System.EventHandler(this.BtnPacientesInicio_Click);
             // 
             // BtnDoctoresInicio
             // 
@@ -158,6 +188,7 @@
             this.BtnDoctoresInicio.TabIndex = 81;
             this.BtnDoctoresInicio.Text = "Doctores";
             this.BtnDoctoresInicio.UseVisualStyleBackColor = false;
+            this.BtnDoctoresInicio.Click += new System.EventHandler(this.BtnDoctoresInicio_Click);
             // 
             // BtnRecepcionistaInicio
             // 
@@ -171,6 +202,7 @@
             this.BtnRecepcionistaInicio.TabIndex = 80;
             this.BtnRecepcionistaInicio.Text = "Recepcionista";
             this.BtnRecepcionistaInicio.UseVisualStyleBackColor = false;
+            this.BtnRecepcionistaInicio.Click += new System.EventHandler(this.BtnRecepcionistaInicio_Click);
             // 
             // BtnLaboratorioInicio
             // 
@@ -184,12 +216,13 @@
             this.BtnLaboratorioInicio.TabIndex = 79;
             this.BtnLaboratorioInicio.Text = "Laboratorio";
             this.BtnLaboratorioInicio.UseVisualStyleBackColor = false;
+            this.BtnLaboratorioInicio.Click += new System.EventHandler(this.BtnLaboratorioInicio_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 555);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 609);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -431,30 +464,19 @@
             this.pictureBox10.TabIndex = 11;
             this.pictureBox10.TabStop = false;
             // 
-            // BtnSalirInicio
+            // PrescrBtn
             // 
-            this.BtnSalirInicio.BackColor = System.Drawing.Color.Red;
-            this.BtnSalirInicio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalirInicio.ForeColor = System.Drawing.Color.White;
-            this.BtnSalirInicio.Location = new System.Drawing.Point(71, 554);
-            this.BtnSalirInicio.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnSalirInicio.Name = "BtnSalirInicio";
-            this.BtnSalirInicio.Size = new System.Drawing.Size(84, 28);
-            this.BtnSalirInicio.TabIndex = 106;
-            this.BtnSalirInicio.Text = "Salir";
-            this.BtnSalirInicio.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(57, 50);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(98, 80);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 109;
-            this.pictureBox11.TabStop = false;
+            this.PrescrBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.PrescrBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrescrBtn.ForeColor = System.Drawing.Color.White;
+            this.PrescrBtn.Location = new System.Drawing.Point(70, 527);
+            this.PrescrBtn.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.PrescrBtn.Name = "PrescrBtn";
+            this.PrescrBtn.Size = new System.Drawing.Size(126, 38);
+            this.PrescrBtn.TabIndex = 110;
+            this.PrescrBtn.Text = "Prescripciones";
+            this.PrescrBtn.UseVisualStyleBackColor = false;
+            this.PrescrBtn.Click += new System.EventHandler(this.PrescrBtn_Click);
             // 
             // PantallaInicio
             // 
@@ -474,6 +496,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -492,7 +515,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,5 +553,6 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button BtnSalirInicio;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Button PrescrBtn;
     }
 }

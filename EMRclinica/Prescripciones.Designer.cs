@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prescripciones));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.BtnSalirPrescripciones = new System.Windows.Forms.Button();
             this.BtnPacientesDoc = new System.Windows.Forms.Button();
             this.BtnDoctoresDoc = new System.Windows.Forms.Button();
             this.BtnRecepcionistaDoc = new System.Windows.Forms.Button();
@@ -40,7 +42,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.PreTxt = new System.Windows.Forms.RichTextBox();
             this.TxtCostoMed = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -60,10 +62,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.BtnSalirPrescripciones = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.PrescripcionPd = new System.Drawing.Printing.PrintDocument();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,7 +72,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrescripcionesDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -94,6 +94,32 @@
             this.panel2.Size = new System.Drawing.Size(215, 694);
             this.panel2.TabIndex = 43;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(57, 28);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(98, 80);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 109;
+            this.pictureBox7.TabStop = false;
+            // 
+            // BtnSalirPrescripciones
+            // 
+            this.BtnSalirPrescripciones.BackColor = System.Drawing.Color.Red;
+            this.BtnSalirPrescripciones.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalirPrescripciones.ForeColor = System.Drawing.Color.White;
+            this.BtnSalirPrescripciones.Location = new System.Drawing.Point(71, 566);
+            this.BtnSalirPrescripciones.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.BtnSalirPrescripciones.Name = "BtnSalirPrescripciones";
+            this.BtnSalirPrescripciones.Size = new System.Drawing.Size(84, 28);
+            this.BtnSalirPrescripciones.TabIndex = 105;
+            this.BtnSalirPrescripciones.Text = "Salir";
+            this.BtnSalirPrescripciones.UseVisualStyleBackColor = false;
+            this.BtnSalirPrescripciones.Click += new System.EventHandler(this.BtnSalirPrescripciones_Click);
+            // 
             // BtnPacientesDoc
             // 
             this.BtnPacientesDoc.BackColor = System.Drawing.Color.LightSlateGray;
@@ -106,6 +132,7 @@
             this.BtnPacientesDoc.TabIndex = 82;
             this.BtnPacientesDoc.Text = "Pacientes";
             this.BtnPacientesDoc.UseVisualStyleBackColor = false;
+            this.BtnPacientesDoc.Click += new System.EventHandler(this.BtnPacientesDoc_Click);
             // 
             // BtnDoctoresDoc
             // 
@@ -119,6 +146,7 @@
             this.BtnDoctoresDoc.TabIndex = 81;
             this.BtnDoctoresDoc.Text = "Doctores";
             this.BtnDoctoresDoc.UseVisualStyleBackColor = false;
+            this.BtnDoctoresDoc.Click += new System.EventHandler(this.BtnDoctoresDoc_Click);
             // 
             // BtnRecepcionistaDoc
             // 
@@ -132,6 +160,7 @@
             this.BtnRecepcionistaDoc.TabIndex = 80;
             this.BtnRecepcionistaDoc.Text = "Recepcionista";
             this.BtnRecepcionistaDoc.UseVisualStyleBackColor = false;
+            this.BtnRecepcionistaDoc.Click += new System.EventHandler(this.BtnRecepcionistaDoc_Click);
             // 
             // BtnLaboratorioDoc
             // 
@@ -145,6 +174,7 @@
             this.BtnLaboratorioDoc.TabIndex = 79;
             this.BtnLaboratorioDoc.Text = "Laboratorio";
             this.BtnLaboratorioDoc.UseVisualStyleBackColor = false;
+            this.BtnLaboratorioDoc.Click += new System.EventHandler(this.BtnLaboratorioDoc_Click);
             // 
             // pictureBox1
             // 
@@ -212,14 +242,14 @@
             this.label7.TabIndex = 112;
             this.label7.Text = "PRESCRIPCIÓN";
             // 
-            // richTextBox1
+            // PreTxt
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(609, 111);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(465, 337);
-            this.richTextBox1.TabIndex = 111;
-            this.richTextBox1.Text = "";
+            this.PreTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PreTxt.Location = new System.Drawing.Point(609, 111);
+            this.PreTxt.Name = "PreTxt";
+            this.PreTxt.Size = new System.Drawing.Size(465, 337);
+            this.PreTxt.TabIndex = 111;
+            this.PreTxt.Text = "";
             // 
             // TxtCostoMed
             // 
@@ -254,7 +284,7 @@
             // TxtNombrePrueba
             // 
             this.TxtNombrePrueba.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombrePrueba.Location = new System.Drawing.Point(347, 235);
+            this.TxtNombrePrueba.Location = new System.Drawing.Point(347, 236);
             this.TxtNombrePrueba.Name = "TxtNombrePrueba";
             this.TxtNombrePrueba.Size = new System.Drawing.Size(186, 26);
             this.TxtNombrePrueba.TabIndex = 107;
@@ -268,6 +298,7 @@
             this.TestIdCb.Size = new System.Drawing.Size(100, 27);
             this.TestIdCb.TabIndex = 106;
             this.TestIdCb.Text = "Test Id";
+            this.TestIdCb.SelectedIndexChanged += new System.EventHandler(this.TestIdCb_SelectedIndexChanged);
             // 
             // PacienteIdCb
             // 
@@ -278,6 +309,7 @@
             this.PacienteIdCb.Size = new System.Drawing.Size(100, 27);
             this.PacienteIdCb.TabIndex = 105;
             this.PacienteIdCb.Text = "Paciente Id";
+            this.PacienteIdCb.SelectedIndexChanged += new System.EventHandler(this.PacienteIdCb_SelectedIndexChanged);
             // 
             // pictureBox6
             // 
@@ -289,6 +321,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 94;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // DocIdCb
             // 
@@ -299,6 +332,7 @@
             this.DocIdCb.Size = new System.Drawing.Size(100, 27);
             this.DocIdCb.TabIndex = 93;
             this.DocIdCb.Text = "Doctor Id";
+            this.DocIdCb.SelectedIndexChanged += new System.EventHandler(this.DocIdCb_SelectedIndexChanged);
             // 
             // TxtNombreDoc
             // 
@@ -320,6 +354,7 @@
             this.BtnEliminarPresc.TabIndex = 104;
             this.BtnEliminarPresc.Text = "Eliminar";
             this.BtnEliminarPresc.UseVisualStyleBackColor = false;
+            this.BtnEliminarPresc.Click += new System.EventHandler(this.BtnEliminarPresc_Click);
             // 
             // BtnAgregarPresc
             // 
@@ -333,6 +368,7 @@
             this.BtnAgregarPresc.TabIndex = 103;
             this.BtnAgregarPresc.Text = "Agregar";
             this.BtnAgregarPresc.UseVisualStyleBackColor = false;
+            this.BtnAgregarPresc.Click += new System.EventHandler(this.BtnAgregarPresc_Click);
             // 
             // TxtMedicamentos
             // 
@@ -415,34 +451,10 @@
             this.label12.TabIndex = 95;
             this.label12.Text = "Nombre del Doctor";
             // 
-            // BtnSalirPrescripciones
-            // 
-            this.BtnSalirPrescripciones.BackColor = System.Drawing.Color.Red;
-            this.BtnSalirPrescripciones.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalirPrescripciones.ForeColor = System.Drawing.Color.White;
-            this.BtnSalirPrescripciones.Location = new System.Drawing.Point(71, 566);
-            this.BtnSalirPrescripciones.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.BtnSalirPrescripciones.Name = "BtnSalirPrescripciones";
-            this.BtnSalirPrescripciones.Size = new System.Drawing.Size(84, 28);
-            this.BtnSalirPrescripciones.TabIndex = 105;
-            this.BtnSalirPrescripciones.Text = "Salir";
-            this.BtnSalirPrescripciones.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(57, 28);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(98, 80);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 109;
-            this.pictureBox7.TabStop = false;
-            // 
             // PrescripcionPd
             // 
             this.PrescripcionPd.DocumentName = "Prescripcion";
+            this.PrescripcionPd.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrescripcionPd_PrintPage);
             // 
             // Prescripciones
             // 
@@ -450,7 +462,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 694);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.PreTxt);
             this.Controls.Add(this.TxtCostoMed);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
@@ -475,7 +487,9 @@
             this.Name = "Prescripciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prescripciones";
+            this.Load += new System.EventHandler(this.Prescripciones_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -483,7 +497,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrescripcionesDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,7 +515,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox PreTxt;
         private System.Windows.Forms.TextBox TxtCostoMed;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;

@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ContrasenaTB = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.UsuarioTB = new System.Windows.Forms.TextBox();
+            this.RolCB = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnReiniciar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -79,14 +79,15 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // textBox2
+            // ContrasenaTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 399);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 20);
-            this.textBox2.TabIndex = 21;
+            this.ContrasenaTB.Location = new System.Drawing.Point(142, 399);
+            this.ContrasenaTB.Margin = new System.Windows.Forms.Padding(4);
+            this.ContrasenaTB.Name = "ContrasenaTB";
+            this.ContrasenaTB.Size = new System.Drawing.Size(232, 20);
+            this.ContrasenaTB.TabIndex = 21;
             // 
             // label7
             // 
@@ -122,27 +123,29 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Acceso";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // UsuarioTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 326);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 20);
-            this.textBox1.TabIndex = 17;
+            this.UsuarioTB.Location = new System.Drawing.Point(142, 326);
+            this.UsuarioTB.Margin = new System.Windows.Forms.Padding(4);
+            this.UsuarioTB.Name = "UsuarioTB";
+            this.UsuarioTB.Size = new System.Drawing.Size(232, 20);
+            this.UsuarioTB.TabIndex = 17;
             // 
-            // comboBox1
+            // RolCB
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.RolCB.FormattingEnabled = true;
+            this.RolCB.Items.AddRange(new object[] {
             "Admin",
             "Doctor",
             "Recepcionista"});
-            this.comboBox1.Location = new System.Drawing.Point(142, 250);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 21);
-            this.comboBox1.TabIndex = 16;
+            this.RolCB.Location = new System.Drawing.Point(142, 250);
+            this.RolCB.Margin = new System.Windows.Forms.Padding(4);
+            this.RolCB.Name = "RolCB";
+            this.RolCB.Size = new System.Drawing.Size(232, 21);
+            this.RolCB.TabIndex = 16;
+            this.RolCB.SelectedIndexChanged += new System.EventHandler(this.RolCB_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -168,6 +171,7 @@
             this.BtnReiniciar.TabIndex = 106;
             this.BtnReiniciar.Text = "Reiniciar";
             this.BtnReiniciar.UseVisualStyleBackColor = false;
+            this.BtnReiniciar.Click += new System.EventHandler(this.BtnReiniciar_Click);
             // 
             // Form1
             // 
@@ -176,12 +180,12 @@
             this.ClientSize = new System.Drawing.Size(528, 611);
             this.Controls.Add(this.BtnReiniciar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ContrasenaTB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.UsuarioTB);
+            this.Controls.Add(this.RolCB);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -201,12 +205,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ContrasenaTB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox UsuarioTB;
+        private System.Windows.Forms.ComboBox RolCB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnReiniciar;
     }
