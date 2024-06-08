@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pacientes));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PrescripcionBtn = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.BtnSalirPacientes = new System.Windows.Forms.Button();
             this.BtnPacientes = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.btnEliminarPaciente = new System.Windows.Forms.Button();
             this.btnAgregarPaciente = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.PrescripcionBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,6 +92,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(215, 694);
             this.panel2.TabIndex = 3;
+            // 
+            // PrescripcionBtn
+            // 
+            this.PrescripcionBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.PrescripcionBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrescripcionBtn.ForeColor = System.Drawing.Color.White;
+            this.PrescripcionBtn.Location = new System.Drawing.Point(73, 528);
+            this.PrescripcionBtn.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.PrescripcionBtn.Name = "PrescripcionBtn";
+            this.PrescripcionBtn.Size = new System.Drawing.Size(126, 38);
+            this.PrescripcionBtn.TabIndex = 108;
+            this.PrescripcionBtn.Text = "Prescripciones";
+            this.PrescripcionBtn.UseVisualStyleBackColor = false;
+            this.PrescripcionBtn.Click += new System.EventHandler(this.PrescripcionBtn_Click);
             // 
             // pictureBox7
             // 
@@ -436,20 +450,6 @@
             this.pictureBox6.TabIndex = 78;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // PrescripcionBtn
-            // 
-            this.PrescripcionBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.PrescripcionBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrescripcionBtn.ForeColor = System.Drawing.Color.White;
-            this.PrescripcionBtn.Location = new System.Drawing.Point(73, 528);
-            this.PrescripcionBtn.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.PrescripcionBtn.Name = "PrescripcionBtn";
-            this.PrescripcionBtn.Size = new System.Drawing.Size(126, 38);
-            this.PrescripcionBtn.TabIndex = 108;
-            this.PrescripcionBtn.Text = "Prescripciones";
-            this.PrescripcionBtn.UseVisualStyleBackColor = false;
-            this.PrescripcionBtn.Click += new System.EventHandler(this.PrescripcionBtn_Click);
             // 
             // Pacientes
             // 

@@ -13,11 +13,11 @@ namespace EMRclinica
 {
     public partial class Prescripciones : Form
     {
-        
+
         public Prescripciones()
         {
             InitializeComponent();
-          
+
         }
         private string connectionString = "server=localhost;" +
                "user=root;" +
@@ -295,7 +295,7 @@ namespace EMRclinica
             }
         }
 
-    private void PacienteIdCb_SelectedIndexChanged(object sender, EventArgs e)
+        private void PacienteIdCb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -370,7 +370,9 @@ namespace EMRclinica
 
         private void BtnDoctoresDoc_Click(object sender, EventArgs e)
         {
-           
+            Doctores doc = new Doctores();
+            doc.Show();
+            this.Hide();
         }
 
         private void BtnLaboratorioDoc_Click(object sender, EventArgs e)
@@ -383,7 +385,9 @@ namespace EMRclinica
 
         private void BtnRecepcionistaDoc_Click(object sender, EventArgs e)
         {
-       
+            Recepcionista obj = new Recepcionista ();
+            obj.Show();
+            this.Hide();
         }
 
         private void BtnSalirPrescripciones_Click(object sender, EventArgs e)

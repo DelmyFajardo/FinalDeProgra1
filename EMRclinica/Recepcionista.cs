@@ -122,7 +122,9 @@ namespace EMRclinica
 
         private void BtnRecepcionistaDoc_Click(object sender, EventArgs e)
         {
-            
+            Prescripciones recep = new Prescripciones();
+            recep.Show();
+            this.Hide();
         }
 
         private void BtnSalirRecepcionista_Click(object sender, EventArgs e)
@@ -139,7 +141,9 @@ namespace EMRclinica
 
         private void PresBtn_Click(object sender, EventArgs e)
         {
-            
+            Prescripciones presc = new Prescripciones();
+            presc.Show();
+            this.Hide();
         }
     }
 }

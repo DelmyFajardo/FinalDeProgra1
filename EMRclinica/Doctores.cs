@@ -1,4 +1,5 @@
 ﻿using Microsoft.OData.Edm;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,7 +60,7 @@ namespace EMRclinica
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-             
+            InsertarDoctores();
         }
 
         private void ActualizarDoctor()
@@ -134,7 +135,9 @@ namespace EMRclinica
 
         private void BtnDoctoresDoc_Click(object sender, EventArgs e)
         {
-           
+            Doctores obj = new Doctores();
+            obj.Show();
+            this.Hide();
         }
 
         private void BtnLaboratorioDoc_Click(object sender, EventArgs e)
@@ -165,7 +168,9 @@ namespace EMRclinica
 
         private void prescripBtn_Click(object sender, EventArgs e)
         {
-           
+            Prescripciones obj = new Prescripciones();
+            obj.Show();
+            this.Hide();
         }
     }
 

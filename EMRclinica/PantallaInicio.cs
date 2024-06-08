@@ -27,13 +27,15 @@ namespace EMRclinica
 
         private void BtnDoctoresInicio_Click(object sender, EventArgs e)
         {
-            
+            Doctores doc = new Doctores();
+            doc.Show();
+            this.Hide();
         }
 
         private void BtnLaboratorioInicio_Click(object sender, EventArgs e)
         {
-           Laboratorio obj = new Laboratorio();
-            obj .Show();
+            Laboratorio obj = new Laboratorio();
+            obj.Show();
             this.Hide();
         }
 
@@ -59,7 +61,9 @@ namespace EMRclinica
 
         private void PrescrBtn_Click(object sender, EventArgs e)
         {
-          
+            Prescripciones presc = new Prescripciones();
+            presc.Show();
+            this.Hide();
         }
     }
 }

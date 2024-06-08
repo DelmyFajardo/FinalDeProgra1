@@ -120,7 +120,9 @@ namespace EMRclinica
 
         private void BtnDoctores_Click(object sender, EventArgs e)
         {
-            
+            Doctores doc = new Doctores();
+            doc.Show();
+            this.Hide();
         }
 
         private void BtnLab_Click(object sender, EventArgs e)
@@ -132,7 +134,7 @@ namespace EMRclinica
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            
+            InsertarPacientes();
         }
 
         private void BtnSalirPacientes_Click(object sender, EventArgs e)
@@ -149,7 +151,9 @@ namespace EMRclinica
 
         private void PrescripcionBtn_Click(object sender, EventArgs e)
         {
-           
+            Prescripciones presc = new Prescripciones();
+            presc.Show();
+            this.Hide();
         }
     }
  
