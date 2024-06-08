@@ -16,5 +16,33 @@ namespace EMRclinica
         {
             InitializeComponent();
         }
+        private string connectionString = "server=localhost;" +
+          "user=root;" +
+          "password=;" +
+          "database=clinicadb;";
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void RolCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RolCB.SelectedIndex = 0;
+            UsuarioTB.Text = "";
+            ContrasenaTB.Text = " ";
+        }
+        public static string Role;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void BtnReiniciar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

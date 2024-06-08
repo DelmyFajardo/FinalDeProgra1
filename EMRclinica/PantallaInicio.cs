@@ -16,5 +16,50 @@ namespace EMRclinica
         {
             InitializeComponent();
         }
+
+        private void BtnPacientesInicio_Click(object sender, EventArgs e)
+        {
+            Pacientes obj = new Pacientes();
+            obj.Show();
+            this.Hide();
+
+        }
+
+        private void BtnDoctoresInicio_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnLaboratorioInicio_Click(object sender, EventArgs e)
+        {
+           Laboratorio obj = new Laboratorio();
+            obj .Show();
+            this.Hide();
+        }
+
+        private void BtnRecepcionistaInicio_Click(object sender, EventArgs e)
+        {
+            Recepcionista obj = new Recepcionista();
+            obj.Show();
+            this.Hide();
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnSalirInicio_Click(object sender, EventArgs e)
+        {
+            Form1 obj = new Form1();
+            obj .Show();
+            this.Hide();
+        }
+
+        private void PrescrBtn_Click(object sender, EventArgs e)
+        {
+          
+        }
     }
 }

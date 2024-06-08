@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recepcionista));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.BtnSalirRecepcionista = new System.Windows.Forms.Button();
             this.BtnPacientesDoc = new System.Windows.Forms.Button();
             this.BtnDoctoresDoc = new System.Windows.Forms.Button();
@@ -45,18 +46,19 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.RecepcionistaDGV = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.txtRecepcionista = new System.Windows.Forms.TextBox();
+            this.PresBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -64,12 +66,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecepcionistaDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.PresBtn);
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.BtnSalirRecepcionista);
             this.panel2.Controls.Add(this.BtnPacientesDoc);
@@ -87,18 +89,31 @@
             this.panel2.Size = new System.Drawing.Size(215, 694);
             this.panel2.TabIndex = 42;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(57, 24);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(98, 80);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 109;
+            this.pictureBox6.TabStop = false;
+            // 
             // BtnSalirRecepcionista
             // 
             this.BtnSalirRecepcionista.BackColor = System.Drawing.Color.Red;
             this.BtnSalirRecepcionista.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalirRecepcionista.ForeColor = System.Drawing.Color.White;
-            this.BtnSalirRecepcionista.Location = new System.Drawing.Point(71, 538);
+            this.BtnSalirRecepcionista.Location = new System.Drawing.Point(71, 572);
             this.BtnSalirRecepcionista.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
             this.BtnSalirRecepcionista.Name = "BtnSalirRecepcionista";
             this.BtnSalirRecepcionista.Size = new System.Drawing.Size(84, 28);
             this.BtnSalirRecepcionista.TabIndex = 106;
             this.BtnSalirRecepcionista.Text = "Salir";
             this.BtnSalirRecepcionista.UseVisualStyleBackColor = false;
+            this.BtnSalirRecepcionista.Click += new System.EventHandler(this.BtnSalirRecepcionista_Click);
             // 
             // BtnPacientesDoc
             // 
@@ -112,6 +127,7 @@
             this.BtnPacientesDoc.TabIndex = 82;
             this.BtnPacientesDoc.Text = "Pacientes";
             this.BtnPacientesDoc.UseVisualStyleBackColor = false;
+            this.BtnPacientesDoc.Click += new System.EventHandler(this.BtnPacientesDoc_Click);
             // 
             // BtnDoctoresDoc
             // 
@@ -125,6 +141,7 @@
             this.BtnDoctoresDoc.TabIndex = 81;
             this.BtnDoctoresDoc.Text = "Doctores";
             this.BtnDoctoresDoc.UseVisualStyleBackColor = false;
+            this.BtnDoctoresDoc.Click += new System.EventHandler(this.BtnDoctoresDoc_Click);
             // 
             // BtnRecepcionistaDoc
             // 
@@ -138,6 +155,7 @@
             this.BtnRecepcionistaDoc.TabIndex = 80;
             this.BtnRecepcionistaDoc.Text = "Recepcionista";
             this.BtnRecepcionistaDoc.UseVisualStyleBackColor = false;
+            this.BtnRecepcionistaDoc.Click += new System.EventHandler(this.BtnRecepcionistaDoc_Click);
             // 
             // BtnLaboratorioDoc
             // 
@@ -151,12 +169,13 @@
             this.BtnLaboratorioDoc.TabIndex = 79;
             this.BtnLaboratorioDoc.Text = "Laboratorio";
             this.BtnLaboratorioDoc.UseVisualStyleBackColor = false;
+            this.BtnLaboratorioDoc.Click += new System.EventHandler(this.BtnLaboratorioDoc_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 539);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 572);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 27);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -218,6 +237,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 98;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // label16
             // 
@@ -263,13 +283,13 @@
             this.label11.TabIndex = 94;
             this.label11.Text = "Nombre";
             // 
-            // textBox3
+            // txtContrasena
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(727, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(186, 26);
-            this.textBox3.TabIndex = 93;
+            this.txtContrasena.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrasena.Location = new System.Drawing.Point(727, 107);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(186, 26);
+            this.txtContrasena.TabIndex = 93;
             // 
             // btnEditar
             // 
@@ -283,15 +303,16 @@
             this.btnEditar.TabIndex = 92;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // textBox2
+            // txtDireccion
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(944, 105);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(186, 100);
-            this.textBox2.TabIndex = 85;
+            this.txtDireccion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(944, 105);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(186, 100);
+            this.txtDireccion.TabIndex = 85;
             // 
             // button5
             // 
@@ -305,6 +326,7 @@
             this.button5.TabIndex = 91;
             this.button5.Text = "Eliminar";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnAgregar
             // 
@@ -318,6 +340,7 @@
             this.btnAgregar.TabIndex = 90;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label8
             // 
@@ -330,13 +353,13 @@
             this.label8.TabIndex = 87;
             this.label8.Text = "Dirección";
             // 
-            // textBox5
+            // txtTelefono
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(496, 107);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(186, 26);
-            this.textBox5.TabIndex = 88;
+            this.txtTelefono.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(496, 107);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(186, 26);
+            this.txtTelefono.TabIndex = 88;
             // 
             // RecepcionistaDGV
             // 
@@ -358,25 +381,27 @@
             this.label15.TabIndex = 86;
             this.label15.Text = "Sistema de Registro Médico ";
             // 
-            // textBox1
+            // txtRecepcionista
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(275, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 26);
-            this.textBox1.TabIndex = 84;
+            this.txtRecepcionista.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRecepcionista.Location = new System.Drawing.Point(275, 107);
+            this.txtRecepcionista.Name = "txtRecepcionista";
+            this.txtRecepcionista.Size = new System.Drawing.Size(186, 26);
+            this.txtRecepcionista.TabIndex = 84;
             // 
-            // pictureBox6
+            // PresBtn
             // 
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(57, 24);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(98, 80);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 109;
-            this.pictureBox6.TabStop = false;
+            this.PresBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.PresBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PresBtn.ForeColor = System.Drawing.Color.White;
+            this.PresBtn.Location = new System.Drawing.Point(70, 492);
+            this.PresBtn.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.PresBtn.Name = "PresBtn";
+            this.PresBtn.Size = new System.Drawing.Size(126, 38);
+            this.PresBtn.TabIndex = 110;
+            this.PresBtn.Text = "Prescripciones";
+            this.PresBtn.UseVisualStyleBackColor = false;
+            this.PresBtn.Click += new System.EventHandler(this.PresBtn_Click);
             // 
             // Recepcionista
             // 
@@ -388,22 +413,24 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.RecepcionistaDGV);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtRecepcionista);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Recepcionista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recepcionista";
+            this.Load += new System.EventHandler(this.Recepcionista_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -411,7 +438,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecepcionistaDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -434,17 +460,18 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.DataGridView RecepcionistaDGV;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRecepcionista;
         private System.Windows.Forms.Button BtnSalirRecepcionista;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button PresBtn;
     }
 }
