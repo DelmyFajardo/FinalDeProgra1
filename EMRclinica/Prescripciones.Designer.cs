@@ -352,9 +352,9 @@
             this.BtnEliminarPresc.Name = "BtnEliminarPresc";
             this.BtnEliminarPresc.Size = new System.Drawing.Size(126, 38);
             this.BtnEliminarPresc.TabIndex = 104;
-            this.BtnEliminarPresc.Text = "Eliminar";
+            this.BtnEliminarPresc.Text = "Imprimir";
             this.BtnEliminarPresc.UseVisualStyleBackColor = false;
-            this.BtnEliminarPresc.Click += new System.EventHandler(this.BtnEliminarPresc_Click);
+          
             // 
             // BtnAgregarPresc
             // 

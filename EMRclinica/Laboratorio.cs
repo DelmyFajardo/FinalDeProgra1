@@ -13,9 +13,9 @@ namespace EMRclinica
 {
     public partial class Laboratorio : Form
     {
-        public int TestNum { get; private set; }
-        public string NombreTest { get; private set; }
-        public string CostoTest { get; private set; }
+        public int TestNum { get; set; }
+        public string NombreTest { get; set; }
+        public string CostoTest { get; set; }
 
         public Laboratorio()
         {

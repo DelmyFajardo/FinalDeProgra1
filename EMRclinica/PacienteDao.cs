@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySql.Data.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,14 +35,14 @@ namespace EMRclinica
                         while (reader.Read())
                         {
                             Pacientes Paciente = new Pacientes();
-                            Paciente.IdPaciente = Convert.ToInt32(reader["Id"]);
-                            Paciente.NombrePaciente = reader["Nombre"].ToString();
-                            Paciente.GeneroPaciente = reader["Genero"].ToString();
-                            Paciente.FNPaciente = reader["Fecha de nacimiento"].ToString();
-                            Paciente.DireccionPaciente = reader["Direccion"].ToString();
-                            Paciente.TelefonoPaciente = reader["Telefono"].ToString();
-                            Paciente.VIHPaciente = reader["VIH"].ToString();
-                            Paciente.AlPaciente = reader["Alergias"].ToString();
+                            Paciente.IdPaciente = Convert.ToInt32(reader["IdPaciente"]);
+                            Paciente.NombrePaciente = reader["NombrePaciente"].ToString();
+                            Paciente.GeneroPaciente = reader["GeneroPaciente"].ToString();
+                            Paciente.FNPaciente = (DateTime)reader["FNPaciente"];
+                            Paciente.DireccionPaciente = reader["DireccionPaciente"].ToString();
+                            Paciente.TelefonoPaciente = reader["TelefonoPaciente"].ToString();
+                            Paciente.VIHPaciente = reader["VIHPaciente"].ToString();
+                            Paciente.AlPaciente = reader["AlPaciente"].ToString();
                             listaPacientes.Add(Paciente);
                         }
                     }
@@ -62,21 +63,21 @@ namespace EMRclinica
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@idPaciente", id);
+                    cmd.Parameters.AddWithValue("@IdPaciente", id);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             Pacientes Paciente = new Pacientes();
-                            Paciente.IdPaciente = Convert.ToInt32(reader["Id"]);
-                            Paciente.NombrePaciente = reader["Nombre"].ToString();
-                            Paciente.FNPaciente = reader["Fecha de nacimiento"].ToString();
-                            Paciente.GeneroPaciente = reader["Genero"].ToString();
-                            Paciente.DireccionPaciente = reader["Direccion"].ToString();
-                            Paciente.TelefonoPaciente = Convert.ToInt32(reader["Telefono"]).ToString();
-                            Paciente.VIHPaciente = reader["VIH"].ToString();
-                            Paciente.AlPaciente = reader["Alergias"].ToString() ;
+                            Paciente.IdPaciente = Convert.ToInt32(reader["IdPaciente"]);
+                            Paciente.NombrePaciente = reader["NombrePaciente"].ToString();
+                            Paciente.FNPaciente = (DateTime)reader["FNPaciente"];
+                            Paciente.GeneroPaciente = reader["GeneroPaciente"].ToString();
+                            Paciente.DireccionPaciente = reader["DireccionPaciente"].ToString();
+                            Paciente.TelefonoPaciente = Convert.ToInt32(reader["TelefonoPaciente"]).ToString();
+                            Paciente.VIHPaciente = reader["VIHPaciente"].ToString();
+                            Paciente.AlPaciente = reader["AlPaciente"].ToString() ;
                             
 
                             return Paciente;
@@ -103,10 +104,10 @@ namespace EMRclinica
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
+                    cmd.Parameters.AddWithValue("@IdPaciente", Paciente.IdPaciente);
                     cmd.Parameters.AddWithValue("@NombrePaciente", Paciente.NombrePaciente);
                     cmd.Parameters.AddWithValue("@GeneroPaciente", Paciente.GeneroPaciente);
                     cmd.Parameters.AddWithValue("@FNPaciente", Paciente.FNPaciente);
-                    cmd.Parameters.AddWithValue("@DireccionPaciente", Paciente. DireccionPaciente);
                     cmd.Parameters.AddWithValue("@DireccionPaciente", Paciente.DireccionPaciente);
                     cmd.Parameters.AddWithValue("@TelefonoPaciente", Paciente.TelefonoPaciente);
                     cmd.Parameters.AddWithValue("@VIHPaciente", Paciente.VIHPaciente);

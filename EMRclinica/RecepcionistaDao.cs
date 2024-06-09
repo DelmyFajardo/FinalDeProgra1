@@ -33,11 +33,11 @@ namespace EMRclinica
                         while (reader.Read())
                         {
                             Recepcionista recepcionista = new Recepcionista();
-                            recepcionista.IdRecepcionista = Convert.ToInt32(reader["Id"]);
-                            recepcionista.NombreRecepcionista = reader["Nombre"].ToString();
-                            recepcionista.TelefonoRecepcionista = reader["Telefono"].ToString();
-                            recepcionista.DireccionRecepcionista = reader["Direccion"].ToString();
-                            recepcionista.ContrasenaRecepcionista = reader["Contrasena"].ToString();
+                            recepcionista.IdRecepcionista = Convert.ToInt32(reader["IdRecepcionista"]);
+                            recepcionista.NombreRecepcionista = reader["NombreRecepcionista"].ToString();
+                            recepcionista.TelefonoRecepcionista = reader["TelefonoRecepcionista"].ToString();
+                            recepcionista.DireccionRecepcionista = reader["DireccionRecepcionista"].ToString();
+                            recepcionista.ContrasenaRecepcionista = reader["ContrasenaRecepcionista"].ToString();
                           
 
                             listaRecepcionista.Add(recepcionista);
@@ -67,11 +67,11 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Recepcionista recepcionista = new Recepcionista();
-                            recepcionista.IdRecepcionista = Convert.ToInt32(reader["Id"]);
-                            recepcionista.NombreRecepcionista = reader["Nombre"].ToString();
-                            recepcionista.TelefonoRecepcionista = reader["Telefono"].ToString();
-                            recepcionista.DireccionRecepcionista = reader["Direccion"].ToString();
-                            recepcionista.ContrasenaRecepcionista = reader["Contrasena"].ToString();
+                            recepcionista.IdRecepcionista = Convert.ToInt32(reader["IdRecepcionista"]);
+                            recepcionista.NombreRecepcionista = reader["NombreRecepcionista"].ToString();
+                            recepcionista.TelefonoRecepcionista = reader["TelefonoRecepcionista"].ToString();
+                            recepcionista.DireccionRecepcionista = reader["DireccionRecepcionista"].ToString();
+                            recepcionista.ContrasenaRecepcionista = reader["ContrasenaRecepcionista"].ToString();
 
                             return recepcionista;
                         }

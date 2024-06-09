@@ -80,14 +80,16 @@ namespace EMRclinica
             listarPrescripciones();
 
         }
-
-        private void BtnEliminarPresc_Click(object sender, EventArgs e)
+        private void BtnEliminarPresc_Click(object sender, EventArgs e, PrintPreviewDialog printPreviewDialog)
         {
             DataGridViewRow Fila = PrescripcionesDGV.SelectedRows[0];
             int id = (int)Fila.Cells[0].Value;
             PrecripcionesDao Precripcionesdao = new PrecripcionesDao();
             Precripcionesdao.EliminarPrescripcion(id);
             listarPrescripciones();
+            
+            if (printPreviewDialog.ShowDialog() == DialogResult.OK)
+                PrescripcionPd.Print();
         }
 
         private void BtnAgregarPresc_Click(object sender, EventArgs e)
@@ -100,7 +102,7 @@ namespace EMRclinica
             {
                 conn.Open();
 
-                string query = "SELECT IdDoctor WHERE IdDoctor = @IdDoctor";
+                string query = "SELECT IdDoctor FROM doctor WHERE IdDoctor = @IdDoctor";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -111,7 +113,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Doctores doctor = new Doctores();
-                            doctor.IdDoctor = Convert.ToInt32(reader["Id"]);
+                            doctor.IdDoctor = Convert.ToInt32(reader["IdDoctor"]);
 
                         }
                         else
@@ -128,18 +130,18 @@ namespace EMRclinica
             {
                 conn.Open();
 
-                string query = "SELECT IdPaciente WHERE IdPaciente = @IdPaciente";
+                string query = "SELECT IdPaciente FROM paciente WHERE IdPaciente = @IdPaciente";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@idPaciente", IdPaciente);
+                    cmd.Parameters.AddWithValue("@IdPaciente", IdPaciente);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             Pacientes Paciente = new Pacientes();
-                            Paciente.IdPaciente = Convert.ToInt32(reader["Id"]);
+                            Paciente.IdPaciente = Convert.ToInt32(reader["IdPaciente"]);
 
                         }
                         else
@@ -156,7 +158,7 @@ namespace EMRclinica
             {
                 conn.Open();
 
-                string query = "SELECT TestNum WHERE TestNum = @TestNum";
+                string query = "SELECT TestNum FROM laboratorio WHERE TestNum = @TestNum";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -167,7 +169,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Laboratorio Test = new Laboratorio();
-                            // Test.TestNum = Convert.ToInt32(reader["TestNum"]);
+                            Test.TestNum = Convert.ToInt32(reader["TestNum"]);
 
                         }
                         else

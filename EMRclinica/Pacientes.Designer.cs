@@ -391,10 +391,14 @@
             // 
             // PacientesDGV
             // 
+            this.PacientesDGV.AllowUserToAddRows = false;
+            this.PacientesDGV.AllowUserToDeleteRows = false;
+            this.PacientesDGV.AllowUserToOrderColumns = true;
             this.PacientesDGV.BackgroundColor = System.Drawing.Color.White;
             this.PacientesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PacientesDGV.Location = new System.Drawing.Point(253, 344);
             this.PacientesDGV.Name = "PacientesDGV";
+            this.PacientesDGV.ReadOnly = true;
             this.PacientesDGV.Size = new System.Drawing.Size(895, 355);
             this.PacientesDGV.TabIndex = 77;
             // 
@@ -438,6 +442,7 @@
             this.btnAgregarPaciente.TabIndex = 74;
             this.btnAgregarPaciente.Text = "Agregar";
             this.btnAgregarPaciente.UseVisualStyleBackColor = false;
+            this.btnAgregarPaciente.Click += new System.EventHandler(this.btnAgregarPaciente_Click);
             // 
             // pictureBox6
             // 

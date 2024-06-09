@@ -35,14 +35,17 @@ namespace EMRclinica
                         while (reader.Read())
                             {
                                 Doctores Doctor = new Doctores();
-                                Doctor.IdDoctor = Convert.ToInt32(reader["Id"]);
-                                Doctor.NombreDoctor = reader["Nombre"].ToString();
-                                Doctor.FNDoctor = reader["Fecha de nacimiento"].ToString();
-                                Doctor.GeneroDoctor = reader["Genero"].ToString();
-                                Doctor.EspecialidadDoctor = reader["Especialidad"].ToString();
-                                Doctor.ExperienciaDoctor =Convert.ToInt32(reader["Experiencia"]).ToString();
+                                Doctor.IdDoctor = Convert.ToInt32(reader["IdDoctor"]);
+                                Doctor.NombreDoctor = reader["NombreDoctor"].ToString();
+                                Doctor.FNDoctor = (DateTime)reader["FNDoctor"];
+                                Doctor.GeneroDoctor = reader["GeneroDoctor"].ToString();
+                                Doctor.EspecialidadDoctor = reader["EspecialidadDoctor"].ToString();
+                                Doctor.ExperienciaDoctor =Convert.ToInt32(reader["ExperienciaDoctor"]).ToString();
+                                Doctor.TelefonoDoctor = reader["TelefonoDoctor"].ToString();
+                                Doctor.DireccionDoctor = reader["DireccionDoctor"].ToString();
+                                Doctor.ContrasenaDoctor = reader["ContrasenaDoctor"].ToString();
 
-                                listaDoctores.Add(Doctor);
+                            listaDoctores.Add(Doctor);
                             }
                         }
                     }
@@ -69,15 +72,15 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Doctores Doctor = new Doctores();
-                            Doctor.IdDoctor = Convert.ToInt32(reader["Id"]);
-                            Doctor.NombreDoctor = reader["Nombre"].ToString();
-                            Doctor.FNDoctor = reader["Fecha de nacimiento"].ToString();
-                            Doctor.GeneroDoctor = reader["Genero"].ToString();
-                            Doctor.EspecialidadDoctor = reader["Especialidad"].ToString();
-                            Doctor.ExperienciaDoctor = Convert.ToInt32(reader["Experiencia"]).ToString();
-                            Doctor.TelefonoDoctor = reader["Telefono"].ToString();
-                            Doctor.DireccionDoctor = reader["Direccion"].ToString();
-                            Doctor.ContrasenaDoctor = reader["Contrasena"].ToString();
+                            Doctor.IdDoctor = Convert.ToInt32(reader["IdDoctor"]);
+                            Doctor.NombreDoctor = reader["NombreDoctor"].ToString();
+                            Doctor.FNDoctor = (DateTime)reader["FNDoctor"];
+                            Doctor.GeneroDoctor = reader["GeneroDoctor"].ToString();
+                            Doctor.EspecialidadDoctor = reader["EspecialidadDoctor"].ToString();
+                            Doctor.ExperienciaDoctor = Convert.ToInt32(reader["ExperienciaDoctor"]).ToString();
+                            Doctor.TelefonoDoctor = reader["TelefonoDoctor"].ToString();
+                            Doctor.DireccionDoctor = reader["DireccionDoctor"].ToString();
+                            Doctor.ContrasenaDoctor = reader["ContrasenaDoctor"].ToString();
 
                             return Doctor;
                             }
@@ -124,7 +127,7 @@ namespace EMRclinica
                 {
                     conn.Open();
 
-                    string query = "UPDATE doctor SET NombreDoctor = @NombreDctor, FNDoctor = @FNDoctor, " +
+                    string query = "UPDATE doctor SET NombreDoctor = @NombreDoctor, FNDoctor = @FNDoctor, " +
                         "GeneroDoctor = @GeneroDoctor, EspecialidadDoctor = @EspecialidadDoctor, ExperienciaDoctor = @ExperienciaDoctor, TelefonoDoctor = @TelefonoDoctor, DireccionDoctor = @DireccionDoctor, ContrasenaDoctor =@ContrasenaDoctor WHERE IdDoctor = @IdDoctor";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -137,9 +140,9 @@ namespace EMRclinica
                     cmd.Parameters.AddWithValue("@TelefonoDoctor", Doctor.TelefonoDoctor);
                     cmd.Parameters.AddWithValue("@DireccionDoctor", Doctor.DireccionDoctor);
                     cmd.Parameters.AddWithValue("@ContrasenaDoctor", Doctor.ContrasenaDoctor);
-                    cmd.Parameters.AddWithValue("@id", Doctor.Id);
+                    cmd.Parameters.AddWithValue("@IdDoctor", Doctor.Id);
 
-                        cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                     }
                 }
             }
