@@ -33,6 +33,7 @@ namespace EMRclinica
         public string NombreTest { get; internal set; }
         public string Medicamentos { get; internal set; }
         public string Costo { get; internal set; }
+      
 
         private void listarPrescripciones()
         {
@@ -81,13 +82,15 @@ namespace EMRclinica
 
         }
 
-        private void BtnEliminarPresc_Click(object sender, EventArgs e)
+        private PrintPreviewDialog GetPrintPreviewDialog()
         {
-            DataGridViewRow Fila = PrescripcionesDGV.SelectedRows[0];
-            int id = (int)Fila.Cells[0].Value;
-            PrecripcionesDao Precripcionesdao = new PrecripcionesDao();
-            Precripcionesdao.EliminarPrescripcion(id);
-            listarPrescripciones();
+            return PrintPreviewDialog;
+        }
+
+        private void BtnEliminarPresc_Click(object sender, EventArgs e, PrintPreviewDialog printPreviewDialog)
+        {
+            if (printPreviewDialog.ShowDialog() == DialogResult.OK) 
+            PrescripcionPd.Print();
         }
 
         private void BtnAgregarPresc_Click(object sender, EventArgs e)

@@ -63,6 +63,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.PrescripcionPd = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -456,6 +457,10 @@
             this.PrescripcionPd.DocumentName = "Prescripcion";
             this.PrescripcionPd.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrescripcionPd_PrintPage);
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // Prescripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,5 +543,6 @@
         private System.Windows.Forms.Button BtnSalirPrescripciones;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Drawing.Printing.PrintDocument PrescripcionPd;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
