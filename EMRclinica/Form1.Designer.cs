@@ -40,6 +40,7 @@
             this.RolCB = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnReiniciar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -173,11 +174,19 @@
             this.BtnReiniciar.UseVisualStyleBackColor = false;
             this.BtnReiniciar.Click += new System.EventHandler(this.BtnReiniciar_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(120, 237);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(254, 34);
+            this.panel2.TabIndex = 107;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 611);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.BtnReiniciar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ContrasenaTB);
@@ -213,6 +222,7 @@
         private System.Windows.Forms.ComboBox RolCB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnReiniciar;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

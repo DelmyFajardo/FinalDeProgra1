@@ -1,4 +1,5 @@
 ﻿using Microsoft.OData.Edm;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace EMRclinica
             DocEspecCb.SelectedItem = readOnly;
             txtExpDoc.ReadOnly = readOnly;
             txtDireccionDoc.ReadOnly = readOnly;
-            //DOcDOB.MaxDate = readOnly;
+            DOcDOB.Enabled = readOnly;
             txtTelDoc.ReadOnly = readOnly;
             txtContrasenaDoc.ReadOnly = readOnly;        
 
@@ -43,7 +44,7 @@ namespace EMRclinica
         
         public int IdDoctor { get; internal set; }
         public string NombreDoctor { get; internal set; }
-        public string FNDoctor { get; internal set; }
+        public DateTime FNDoctor { get; internal set; }
         public string GeneroDoctor { get; internal set; }
         public string EspecialidadDoctor { get; internal set; }
         public string ExperienciaDoctor { get; internal set; }
@@ -59,10 +60,10 @@ namespace EMRclinica
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-             
+            InsertarDoctores();
         }
 
-        private void ActualizarDoctor()
+        private void EditarDoctor()
         {
             Dao dao = new Dao();
             Doctores Doctor = new Doctores();
@@ -75,7 +76,7 @@ namespace EMRclinica
             Doctor.EspecialidadDoctor = DocEspecCb.Text;
             Doctor.ExperienciaDoctor =txtExpDoc.Text;
             Doctor.DireccionDoctor = txtDireccionDoc.Text;
-            Doctor.FNDoctor = DOcDOB.Text;
+            Doctor.FNDoctor = DOcDOB.Value;
             Doctor.TelefonoDoctor = txtTelDoc.Text;
             Doctor.ContrasenaDoctor= txtContrasenaDoc.Text;
             dao.ActualizarDoctor(Doctor);
@@ -91,7 +92,7 @@ namespace EMRclinica
             Doctor.EspecialidadDoctor = DocEspecCb.Text;
             Doctor.ExperienciaDoctor = txtExpDoc.Text;
             Doctor.DireccionDoctor = txtDireccionDoc.Text;
-            Doctor.FNDoctor = DOcDOB.Text;
+            Doctor.FNDoctor = DOcDOB.Value;
             Doctor.TelefonoDoctor = txtTelDoc.Text;
             Doctor.ContrasenaDoctor = txtContrasenaDoc.Text;
 
@@ -112,17 +113,8 @@ namespace EMRclinica
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow Fila = DoctoresDGV.SelectedRows[0];
-            txtNombreDoc.Text = (String)Fila.Cells[1].Value;
-            DocGenCb.Text = (String)Fila.Cells[2].Value;
-            DocEspecCb.Text = ((String)Fila.Cells[3].Value).ToString();
-            txtExpDoc.Text = ((int)Fila.Cells[4].Value).ToString();
-            txtDireccionDoc.Text = (String)Fila.Cells[5].Value;
-            //DOcDOB.Text = (SistemDateTime)Fila.Cells[6].Value;
-            txtTelDoc.Text = ((int)Fila.Cells[7].Value).ToString();
-            txtContrasenaDoc.Text =((String)Fila.Cells[8].Value);
-            habilitarCampos(false);
-            
+            EditarDoctor();
+
         }
 
         private void BtnPacientesDoc_Click(object sender, EventArgs e)
@@ -134,7 +126,9 @@ namespace EMRclinica
 
         private void BtnDoctoresDoc_Click(object sender, EventArgs e)
         {
-           
+            Doctores obj = new Doctores();
+            obj.Show();
+            this.Hide();
         }
 
         private void BtnLaboratorioDoc_Click(object sender, EventArgs e)
@@ -165,7 +159,9 @@ namespace EMRclinica
 
         private void prescripBtn_Click(object sender, EventArgs e)
         {
-           
+            Prescripciones obj = new Prescripciones();
+            obj.Show();
+            this.Hide();
         }
     }
 

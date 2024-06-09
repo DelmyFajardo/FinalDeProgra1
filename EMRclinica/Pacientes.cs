@@ -24,7 +24,8 @@ namespace EMRclinica
 
             txtNombrePaciente.ReadOnly = readOnly;
             GeneroPacienteCb.SelectedItem = readOnly;
-            //PacDOB.MaxDate = readOnly;
+
+            PacDOB.Enabled = readOnly;
             txtDireccionPaciente.ReadOnly = readOnly;
             txtTelPaciente.ReadOnly = readOnly;
             VIHPacienteCb.SelectedItem = readOnly;
@@ -44,7 +45,7 @@ namespace EMRclinica
         public int IdPaciente { get; internal set; }
         public string NombrePaciente { get; internal set; }
         public string GeneroPaciente { get; internal set; }
-        public string FNPaciente { get; internal set; }
+        public DateTime FNPaciente { get; internal set; }
         public string DireccionPaciente { get; internal set; }
         public object TelefonoPaciente { get; internal set; }
         public string VIHPaciente { get; internal set; }
@@ -61,7 +62,7 @@ namespace EMRclinica
             Paciente.IdPaciente = id;
             Paciente.NombrePaciente = txtNombrePaciente.Text;
             Paciente.GeneroPaciente = GeneroPacienteCb.Text;
-            Paciente.FNPaciente = PacDOB.Text;
+            Paciente.FNPaciente = PacDOB.Value;
             Paciente.DireccionPaciente = txtDireccionPaciente.Text;
             Paciente.TelefonoPaciente = txtTelPaciente.Text;
             Paciente.VIHPaciente = PacDOB.Text;
@@ -76,7 +77,7 @@ namespace EMRclinica
             Pacientes Paciente = new Pacientes();
             Paciente.NombrePaciente = txtNombrePaciente.Text;
             Paciente.GeneroPaciente = GeneroPacienteCb.Text;
-            Paciente.FNPaciente = PacDOB.Text;
+            Paciente.FNPaciente = PacDOB.Value;
             Paciente.DireccionPaciente = txtDireccionPaciente.Text;
             Paciente.TelefonoPaciente = txtTelPaciente.Text;
             Paciente.VIHPaciente = PacDOB.Text;
@@ -103,11 +104,12 @@ namespace EMRclinica
             DataGridViewRow Fila = PacientesDGV.SelectedRows[0];
             txtNombrePaciente.Text = (String)Fila.Cells[1].Value;
             GeneroPacienteCb.Text = (String)Fila.Cells[2].Value;
-            //PacDOB.Text = (SistemDateTime)Fila.Cells[3].Value;
+            PacDOB.Text =(string)Fila.Cells[3].Value;
             txtDireccionPaciente.Text = (String)Fila.Cells[4].Value;
             txtTelPaciente.Text = ((string)Fila.Cells[5].Value);
             VIHPacienteCb.Text = ((String)Fila.Cells[6].Value);
             txtAlergiasPaciente.Text = ((String)Fila.Cells[7].Value);
+            ;
             habilitarCampos(false);
         }
 
@@ -120,7 +122,9 @@ namespace EMRclinica
 
         private void BtnDoctores_Click(object sender, EventArgs e)
         {
-            
+            Doctores doc = new Doctores();
+            doc.Show();
+            this.Hide();
         }
 
         private void BtnLab_Click(object sender, EventArgs e)
@@ -132,7 +136,7 @@ namespace EMRclinica
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            
+            InsertarPacientes();
         }
 
         private void BtnSalirPacientes_Click(object sender, EventArgs e)
@@ -149,7 +153,14 @@ namespace EMRclinica
 
         private void PrescripcionBtn_Click(object sender, EventArgs e)
         {
-           
+            Prescripciones presc = new Prescripciones();
+            presc.Show();
+            this.Hide();
+        }
+
+        private void btnAgregarPaciente_Click(object sender, EventArgs e)
+        {
+            InsertarPacientes();
         }
     }
  

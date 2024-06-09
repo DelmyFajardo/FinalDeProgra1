@@ -13,11 +13,11 @@ namespace EMRclinica
 {
     public partial class Prescripciones : Form
     {
-        
+
         public Prescripciones()
         {
             InitializeComponent();
-          
+
         }
         private string connectionString = "server=localhost;" +
                "user=root;" +
@@ -33,7 +33,6 @@ namespace EMRclinica
         public string NombreTest { get; internal set; }
         public string Medicamentos { get; internal set; }
         public string Costo { get; internal set; }
-      
 
         private void listarPrescripciones()
         {
@@ -81,16 +80,16 @@ namespace EMRclinica
             listarPrescripciones();
 
         }
-
-        private PrintPreviewDialog GetPrintPreviewDialog()
-        {
-            return PrintPreviewDialog;
-        }
-
         private void BtnEliminarPresc_Click(object sender, EventArgs e, PrintPreviewDialog printPreviewDialog)
         {
-            if (printPreviewDialog.ShowDialog() == DialogResult.OK) 
-            PrescripcionPd.Print();
+            DataGridViewRow Fila = PrescripcionesDGV.SelectedRows[0];
+            int id = (int)Fila.Cells[0].Value;
+            PrecripcionesDao Precripcionesdao = new PrecripcionesDao();
+            Precripcionesdao.EliminarPrescripcion(id);
+            listarPrescripciones();
+            
+            if (printPreviewDialog.ShowDialog() == DialogResult.OK)
+                PrescripcionPd.Print();
         }
 
         private void BtnAgregarPresc_Click(object sender, EventArgs e)
@@ -103,7 +102,7 @@ namespace EMRclinica
             {
                 conn.Open();
 
-                string query = "SELECT IdDoctor WHERE IdDoctor = @IdDoctor";
+                string query = "SELECT IdDoctor FROM doctor WHERE IdDoctor = @IdDoctor";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -114,7 +113,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Doctores doctor = new Doctores();
-                            doctor.IdDoctor = Convert.ToInt32(reader["Id"]);
+                            doctor.IdDoctor = Convert.ToInt32(reader["IdDoctor"]);
 
                         }
                         else
@@ -131,18 +130,18 @@ namespace EMRclinica
             {
                 conn.Open();
 
-                string query = "SELECT IdPaciente WHERE IdPaciente = @IdPaciente";
+                string query = "SELECT IdPaciente FROM paciente WHERE IdPaciente = @IdPaciente";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@idPaciente", IdPaciente);
+                    cmd.Parameters.AddWithValue("@IdPaciente", IdPaciente);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             Pacientes Paciente = new Pacientes();
-                            Paciente.IdPaciente = Convert.ToInt32(reader["Id"]);
+                            Paciente.IdPaciente = Convert.ToInt32(reader["IdPaciente"]);
 
                         }
                         else
@@ -159,7 +158,7 @@ namespace EMRclinica
             {
                 conn.Open();
 
-                string query = "SELECT TestNum WHERE TestNum = @TestNum";
+                string query = "SELECT TestNum FROM laboratorio WHERE TestNum = @TestNum";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
@@ -170,7 +169,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Laboratorio Test = new Laboratorio();
-                            // Test.TestNum = Convert.ToInt32(reader["TestNum"]);
+                            Test.TestNum = Convert.ToInt32(reader["TestNum"]);
 
                         }
                         else
@@ -298,7 +297,7 @@ namespace EMRclinica
             }
         }
 
-    private void PacienteIdCb_SelectedIndexChanged(object sender, EventArgs e)
+        private void PacienteIdCb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -373,7 +372,9 @@ namespace EMRclinica
 
         private void BtnDoctoresDoc_Click(object sender, EventArgs e)
         {
-           
+            Doctores doc = new Doctores();
+            doc.Show();
+            this.Hide();
         }
 
         private void BtnLaboratorioDoc_Click(object sender, EventArgs e)
@@ -386,7 +387,9 @@ namespace EMRclinica
 
         private void BtnRecepcionistaDoc_Click(object sender, EventArgs e)
         {
-       
+            Recepcionista obj = new Recepcionista ();
+            obj.Show();
+            this.Hide();
         }
 
         private void BtnSalirPrescripciones_Click(object sender, EventArgs e)

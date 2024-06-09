@@ -16,7 +16,7 @@ namespace EMRclinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaInicio());
+            Application.Run(new Form1());
         }
     }
 }

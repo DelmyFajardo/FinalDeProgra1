@@ -13,9 +13,9 @@ namespace EMRclinica
 {
     public partial class Laboratorio : Form
     {
-        public int TestNum { get; private set; }
-        public string NombreTest { get; private set; }
-        public string CostoTest { get; private set; }
+        public int TestNum { get; set; }
+        public string NombreTest { get; set; }
+        public string CostoTest { get; set; }
 
         public Laboratorio()
         {
@@ -93,7 +93,10 @@ namespace EMRclinica
 
         private void BtnDoctoresLab_Click(object sender, EventArgs e)
         {
-           
+
+            Doctores obj = new Doctores();
+            obj.Show();
+            this.Hide();
         }
 
         private void BtnLaboratorioLab_Click(object sender, EventArgs e)
@@ -105,6 +108,10 @@ namespace EMRclinica
 
         private void BtnRecepcionistaLab_Click(object sender, EventArgs e)
         {
+
+            Recepcionista obj = new Recepcionista();
+            obj.Show();
+            this.Hide();
         }
 
         private void BtnSalirLab_Click(object sender, EventArgs e)
@@ -121,7 +128,14 @@ namespace EMRclinica
 
         private void CdetBtn_Click(object sender, EventArgs e)
         {
-            
+            Prescripciones obj = new Prescripciones();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void btnAggExam_Click(object sender, EventArgs e)
+        {
+            InsertarTest();
         }
     }
 

@@ -34,9 +34,9 @@ namespace EMRclinica
                         while (reader.Read())
                         {
                             Laboratorio Test= new Laboratorio();
-                         //   Test.TestNum = Convert.ToInt32(reader["Id"]);
-                            //Test.NombreTest = reader["Nombre"].ToString();
-                            //Test.CostoTest = reader["Costo"].ToString();
+                            Test.TestNum = Convert.ToInt32(reader["TestNum"]);
+                            Test.NombreTest = reader["NombreTest"].ToString();
+                            Test.CostoTest = reader["CostoTest"].ToString();
                            
                             
                             listaTest.Add(Test);

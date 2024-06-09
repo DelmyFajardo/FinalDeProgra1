@@ -23,10 +23,10 @@ namespace EMRclinica
 
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
-                    //aperturar conexion
-                    
-                    //diseñar la consulta
-                    string query = "SELECT IdDoctor, NombreDoctor, FNDoctor, GeneroDoctor, EspecialidadDoctor, ExperienciaDoctor, TelefonoDoctor, DireccionDoctor, ContrasenaDoctor FROM doctor";
+                //aperturar conexion
+                conn.Open();
+                //diseñar la consulta
+                string query = "SELECT IdDoctor, NombreDoctor, FNDoctor, GeneroDoctor, EspecialidadDoctor, ExperienciaDoctor, TelefonoDoctor, DireccionDoctor, ContrasenaDoctor FROM doctor";
                     
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -35,14 +35,17 @@ namespace EMRclinica
                         while (reader.Read())
                             {
                                 Doctores Doctor = new Doctores();
-                                Doctor.IdDoctor = Convert.ToInt32(reader["Id"]);
-                                Doctor.NombreDoctor = reader["Nombre"].ToString();
-                                Doctor.FNDoctor = reader["Fecha de nacimiento"].ToString();
-                                Doctor.GeneroDoctor = reader["Genero"].ToString();
-                                Doctor.EspecialidadDoctor = reader["Especialidad"].ToString();
-                                Doctor.ExperienciaDoctor =Convert.ToInt32(reader["codigo_producto"]).ToString();
+                                Doctor.IdDoctor = Convert.ToInt32(reader["IdDoctor"]);
+                                Doctor.NombreDoctor = reader["NombreDoctor"].ToString();
+                                Doctor.FNDoctor = (DateTime)reader["FNDoctor"];
+                                Doctor.GeneroDoctor = reader["GeneroDoctor"].ToString();
+                                Doctor.EspecialidadDoctor = reader["EspecialidadDoctor"].ToString();
+                                Doctor.ExperienciaDoctor =Convert.ToInt32(reader["ExperienciaDoctor"]).ToString();
+                                Doctor.TelefonoDoctor = reader["TelefonoDoctor"].ToString();
+                                Doctor.DireccionDoctor = reader["DireccionDoctor"].ToString();
+                                Doctor.ContrasenaDoctor = reader["ContrasenaDoctor"].ToString();
 
-                                listaDoctores.Add(Doctor);
+                            listaDoctores.Add(Doctor);
                             }
                         }
                     }
@@ -69,15 +72,15 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Doctores Doctor = new Doctores();
-                            Doctor.IdDoctor = Convert.ToInt32(reader["Id"]);
-                            Doctor.NombreDoctor = reader["Nombre"].ToString();
-                            Doctor.FNDoctor = reader["Fecha de nacimiento"].ToString();
-                            Doctor.GeneroDoctor = reader["Genero"].ToString();
-                            Doctor.EspecialidadDoctor = reader["Especialidad"].ToString();
-                            Doctor.ExperienciaDoctor = Convert.ToInt32(reader["Experiencia"]).ToString();
-                            Doctor.TelefonoDoctor = reader["Telefono"].ToString();
-                            Doctor.DireccionDoctor = reader["Direccion"].ToString();
-                            Doctor.ContrasenaDoctor = reader["Contrasena"].ToString();
+                            Doctor.IdDoctor = Convert.ToInt32(reader["IdDoctor"]);
+                            Doctor.NombreDoctor = reader["NombreDoctor"].ToString();
+                            Doctor.FNDoctor = (DateTime)reader["FNDoctor"];
+                            Doctor.GeneroDoctor = reader["GeneroDoctor"].ToString();
+                            Doctor.EspecialidadDoctor = reader["EspecialidadDoctor"].ToString();
+                            Doctor.ExperienciaDoctor = Convert.ToInt32(reader["ExperienciaDoctor"]).ToString();
+                            Doctor.TelefonoDoctor = reader["TelefonoDoctor"].ToString();
+                            Doctor.DireccionDoctor = reader["DireccionDoctor"].ToString();
+                            Doctor.ContrasenaDoctor = reader["ContrasenaDoctor"].ToString();
 
                             return Doctor;
                             }
@@ -124,8 +127,8 @@ namespace EMRclinica
                 {
                     conn.Open();
 
-                    string query = "UPDATE productos SET nombre = @nombre, descripcion = @descripcion, " +
-                        "precio = @precio, cantidad_disponible = @cantidad_disponible, codigo_producto = @codigo_producto WHERE IdDoctor = @IdDoctor";
+                    string query = "UPDATE doctor SET NombreDoctor = @NombreDoctor, FNDoctor = @FNDoctor, " +
+                        "GeneroDoctor = @GeneroDoctor, EspecialidadDoctor = @EspecialidadDoctor, ExperienciaDoctor = @ExperienciaDoctor, TelefonoDoctor = @TelefonoDoctor, DireccionDoctor = @DireccionDoctor, ContrasenaDoctor =@ContrasenaDoctor WHERE IdDoctor = @IdDoctor";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -137,21 +140,21 @@ namespace EMRclinica
                     cmd.Parameters.AddWithValue("@TelefonoDoctor", Doctor.TelefonoDoctor);
                     cmd.Parameters.AddWithValue("@DireccionDoctor", Doctor.DireccionDoctor);
                     cmd.Parameters.AddWithValue("@ContrasenaDoctor", Doctor.ContrasenaDoctor);
-                    cmd.Parameters.AddWithValue("@id", Doctor.Id);
+                    cmd.Parameters.AddWithValue("@IdDoctor", Doctor.Id);
 
-                        cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                     }
                 }
             }
 
-            // Método para eliminar un producto de la base de datos por su ID
+            // Método para eliminar un doctor de la base de datos por su ID
             public void EliminarDoctor(int id)
             {
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
 
-                    string query = "DELETE FROM productos WHERE IdDoctor = @IdDoctor";
+                    string query = "DELETE FROM doctor WHERE IdDoctor = @IdDoctor";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {

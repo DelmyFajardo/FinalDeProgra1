@@ -49,15 +49,15 @@ namespace EMRclinica
                         while (reader.Read())
                         {
                             Prescripciones prescripciones = new Prescripciones();
-                            prescripciones.IdPrescripcion = Convert.ToInt32(reader["Id"]);
-                            prescripciones.IdDoctor = reader["Nombre"].ToString();
-                            prescripciones.NombreDoctor = reader["Genero"].ToString();
-                            prescripciones.IdPaciente = reader["Fecha de nacimiento"].ToString();
-                            prescripciones.NombrePaciente = reader["Direccion"].ToString();
-                            prescripciones.TestNum = reader["Telefono"].ToString();
-                            prescripciones.NombreTest = reader["VIH"].ToString();
-                            prescripciones.Medicamentos = reader["Alergias"].ToString();
-                            prescripciones.Costo = reader["Alergias"].ToString();
+                            prescripciones.IdPrescripcion = Convert.ToInt32(reader["IdPrescripcion"]);
+                            prescripciones.IdDoctor = reader["IdDoctor"].ToString();
+                            prescripciones.NombreDoctor = reader["NombreDoctor"].ToString();
+                            prescripciones.IdPaciente = reader["IdPaciente"].ToString();
+                            prescripciones.NombrePaciente = reader["NOmbrePaciente"].ToString();
+                            prescripciones.TestNum = reader["TestNum"].ToString();
+                            prescripciones.NombreTest = reader["NombreTest"].ToString();
+                            prescripciones.Medicamentos = reader["Medicamentos"].ToString();
+                            prescripciones.Costo = reader["Costo"].ToString();
                             listaPrescripciones.Add(prescripciones);
                         }
                     }
@@ -77,14 +77,14 @@ namespace EMRclinica
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@IdPrescripcion", id);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             Prescripciones prescripciones = new Prescripciones();
-                            prescripciones.IdPrescripcion = Convert.ToInt32(reader["Id"]);
+                            prescripciones.IdPrescripcion = Convert.ToInt32(reader["IdPrescripcion"]);
                             return prescripciones;
                         }
                         else
@@ -113,7 +113,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Doctores doctor = new Doctores();
-                            doctor.IdDoctor = Convert.ToInt32(reader["Id"]);
+                            doctor.IdDoctor = Convert.ToInt32(reader["IdDoctor"]);
 
                         }
                         else
@@ -134,14 +134,14 @@ namespace EMRclinica
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@idPaciente", IdPaciente);
+                    cmd.Parameters.AddWithValue("@IdPaciente", IdPaciente);
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
                             Pacientes Paciente = new Pacientes();
-                            Paciente.IdPaciente = Convert.ToInt32(reader["Id"]);
+                            Paciente.IdPaciente = Convert.ToInt32(reader["IdPaciente"]);
 
                         }
                         else
@@ -183,6 +183,9 @@ namespace EMRclinica
 
         private void GetDoctorNombre(string NombreDoctor)
         {
+
+        
+        
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
@@ -198,7 +201,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Doctores Doctor = new Doctores();
-                            Doctor.NombreDoctor = reader["Nombre"].ToString();
+                            Doctor.NombreDoctor = reader["NombreDoctor"].ToString();
 
                         }
                         else
@@ -227,7 +230,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Pacientes Paciente = new Pacientes();
-                            Paciente.NombrePaciente = reader["Nombre"].ToString();
+                            Paciente.NombrePaciente = reader["NombrePaciente"].ToString();
 
                         }
                         else
@@ -255,7 +258,7 @@ namespace EMRclinica
                         if (reader.Read())
                         {
                             Laboratorio Test = new Laboratorio();
-                            //Test.NombreTest = Convert.ToInt32(reader["Nombre"]);
+                            //Test.NombreTest = string(reader["NombreTest"]); esto da error
 
                         }
                         else
@@ -274,7 +277,7 @@ namespace EMRclinica
                 conn.Open();
 
                 string query = "INSERT INTO prescripcion (IdDoctor ,NombreDoctor,IdPaciente,NombrePaciente,TestNum,NombreTest , Medicamentos, Costo) VALUES " +
-                    "(@,IdDoctor ,@NombreDoctor,@IdPaciente,@NombrePaciente,@TestNum,@NombreTest , @Medicamentos,@ Costo)";
+                    "(@IdDoctor, @NombreDoctor, @IdPaciente, @NombrePaciente, @TestNum, @NombreTest , @Medicamentos, @Costo)";
 
 
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))

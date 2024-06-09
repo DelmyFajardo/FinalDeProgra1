@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Laboratorio));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CdetBtn = new System.Windows.Forms.Button();
             this.BtnSalirLab = new System.Windows.Forms.Button();
             this.BtnPacientesLab = new System.Windows.Forms.Button();
             this.BtnRecepcionistaLab = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.txtNombreExamen = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.CdetBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -85,6 +85,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 465);
             this.panel1.TabIndex = 35;
+            // 
+            // CdetBtn
+            // 
+            this.CdetBtn.BackColor = System.Drawing.Color.LightSlateGray;
+            this.CdetBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CdetBtn.ForeColor = System.Drawing.Color.White;
+            this.CdetBtn.Location = new System.Drawing.Point(76, 378);
+            this.CdetBtn.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.CdetBtn.Name = "CdetBtn";
+            this.CdetBtn.Size = new System.Drawing.Size(122, 38);
+            this.CdetBtn.TabIndex = 108;
+            this.CdetBtn.Text = "Prescripciones";
+            this.CdetBtn.UseVisualStyleBackColor = false;
+            this.CdetBtn.Click += new System.EventHandler(this.CdetBtn_Click);
             // 
             // BtnSalirLab
             // 
@@ -272,6 +286,7 @@
             this.btnAggExam.TabIndex = 82;
             this.btnAggExam.Text = "Agregar";
             this.btnAggExam.UseVisualStyleBackColor = false;
+            this.btnAggExam.Click += new System.EventHandler(this.btnAggExam_Click);
             // 
             // pictureBox2
             // 
@@ -345,20 +360,6 @@
             this.label12.Size = new System.Drawing.Size(145, 19);
             this.label12.TabIndex = 78;
             this.label12.Text = "Nombre del Examen";
-            // 
-            // CdetBtn
-            // 
-            this.CdetBtn.BackColor = System.Drawing.Color.LightSlateGray;
-            this.CdetBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CdetBtn.ForeColor = System.Drawing.Color.White;
-            this.CdetBtn.Location = new System.Drawing.Point(85, 378);
-            this.CdetBtn.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.CdetBtn.Name = "CdetBtn";
-            this.CdetBtn.Size = new System.Drawing.Size(112, 38);
-            this.CdetBtn.TabIndex = 108;
-            this.CdetBtn.Text = "Recepcionista";
-            this.CdetBtn.UseVisualStyleBackColor = false;
-            this.CdetBtn.Click += new System.EventHandler(this.CdetBtn_Click);
             // 
             // Laboratorio
             // 
